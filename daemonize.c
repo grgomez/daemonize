@@ -215,6 +215,7 @@ int main(int argc, char ** argv)
 	daemonize();
 	while(1) 
 	{
+		syslog(LOG_NOTICE, "Hello world!");
 		sleep(1);
 	}
 

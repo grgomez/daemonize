@@ -6,10 +6,11 @@
 # Initialize all necessary sub-systems to start the daemon
 #-----------------------------------------------------------
 
-echo "Starting rsyslog service"
+echo "* Starting rsyslog service"
 sudo service rsyslog start
 
-echo "Starting daemon"
+echo "* Starting daemon"
 sudo /home/german/source/daemonize/daemonize
 
-echo "Done!"
+echo "* Monitoring log in /var/log/syslog"
+watch /var/log/syslog
